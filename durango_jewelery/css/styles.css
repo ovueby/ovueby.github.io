@@ -1,0 +1,71 @@
+
+/* Sam Carr - October 26th */
+
+html {
+	background-image: url("../images/jewelry.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: top;
+}
+
+#outerwrapper {	
+	border-radius: 15%;
+	background: rgba(243,205,170, 0.4);
+	margin-left: auto;
+    margin-right: auto;
+	width: 70%;
+}
+
+main {
+	background-image: linear-gradient(#ffffff, #f0f9e6);
+	padding: 10px;
+	margin: 20px;
+	border-radius: 2em;
+	font-size: 1.25em;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+footer {
+	font-size: 1em;
+	text-align: center;
+	padding: 0 0 10px 0;
+}
+
+#necklace {
+	float:left;
+	border-radius: 2000px;
+}
+
+.addrightmargin {
+	margin-right: 10%;
+}
+
+nav li {
+	list-style-type: none;
+}
+
+nav {
+	font-size: 1.5em;
+	float: none;
+}
+
+@font-face {
+	font-family: Pacifico;
+	src: url(../fonts/Pacifico-Regular.ttf);
+}
+
+@font-face {
+	font-family: Roboto;
+	src: url(../fonts/Roboto-Regular.ttf);
+}
+
+h1 {
+	font-family: "Pacifico";
+	font-size: 4em;
+}
+
+h2 {
+	font-family: "Roboto";
+	font-style: italic;
+	font-size: 2em;
+}
