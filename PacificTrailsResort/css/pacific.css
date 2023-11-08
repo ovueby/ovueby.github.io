@@ -18,7 +18,7 @@ nav{
 	color: #3399CC; 
     font-family: Georgia, 'Times New Roman', serif; 
 	}
-	nav > ul{
+	nav ul li {
 		display: inline;
 	}
 }
