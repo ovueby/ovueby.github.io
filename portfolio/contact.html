@@ -26,6 +26,13 @@
     <main>
         <h2>Contact</h2>
         You can find me at the CWI Ada County Campus.
+        <form action="mailto:samcarr@my.cwi.edu" method="GET">
+            <label class="required" for="name">Your name:</label><br />
+            <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+            <label class="required" for="message">Your message:</label><br />
+            <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+            <input id="submit_button" type="submit" value="Send email" />
+        </form>
     </main>
     <footer>
         <hr>
