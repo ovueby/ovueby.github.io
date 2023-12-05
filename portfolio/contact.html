@@ -25,21 +25,44 @@
     </header>
     <main>
         <h2>Contact</h2>
-        You can find me at the CWI Ada County Campus.
+        <p>You can find me at the <b>CWI Ada County Campus</b>.</p>
+        <p>Alternatively, you can contact me <a href="contact.html">here</a>:</p>
         <form action="mailto:samcarr@my.cwi.edu" method="GET">
             <label class="required" for="name">Your name:</label><br />
-            <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+            <input id="name" class="input" name="name" type="text" value="" size="30" required/><br />
             <label class="required" for="message">Your subject:</label><br />
-            <input id="message" class="input" name="subject" size="30" type="text" value="" /><br />
-            <label class="required" for="message">Your message:</label><br />
-            <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+            <input id="message" class="input" name="subject" size="30" type="text" value="" required/><br />
+            <label name="website_survey">Where did you find the Sam Carr Experience Website?</label> <br>
+            <select id="website_survey" name="website_survey">
+                <option value="home">Home</option>
+                <option value="work">Work</option>
+                <option value="online">Online</option>
+                <option value="inperson">In Person</option>
+            </select>
+            <fieldset>
+                <legend>Select your favorite number:</legend>
+                <div>
+                    <input type="radio" id="1" name="num" value="1" />
+                    <label for="1">1</label>
+                </div>
+                <div>
+                    <input type="radio" id="17" name="num" value="17" />
+                    <label for="17">17</label>
+                </div>
+                <div>
+                    <input type="radio" id="285" name="num" value="285" />
+                    <label for="285">285</label>
+                </div>
+              </fieldset>
+              <label for="delete">Please enter any text you would like to delete:</label><br/>
+              <textarea name="delete"></textarea><br>
             <input id="submit_button" type="submit" value="Send email" />
         </form>
     </main>
     <footer>
         <hr>
-        Find me on <a target="_blank" href="https://www.linkedin.com/">LinkedIn</a> and
-        <a target="_blank" href="https://www.github.com/">GitHub</a>
+        <a target="_blank" href="https://www.linkedin.com/"><img src="image/iconmonstr-linkedin-3-32.png" alt="LinkedIn"></a>
+        <a target="_blank" href="https://www.github.com/"><img src="image/iconmonstr-github-3-32.png" alt="Github"></a>
     </footer>
 </body>
 </html>
