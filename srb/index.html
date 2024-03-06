@@ -9,6 +9,10 @@
          *  1/28/2024 - Added real HTML description, implemented CSS                   *
          *  1/27/2024 - Started project                                                *
                       - Unsuccessfully attempted to make logo                          *
+         *  2/20/2024 - Added FAQ                                                      *
+         *  2/20/2024 - Added Contact page                                             *
+         *  2/26/2024 - Improved Style                                                 *
+         *  3/6/2024  - Added javascript to FAQ and Contact                            *
          ******************************************************************************* -->
     <head>
         <title>The Soda Rebottling Co.</title>
@@ -17,16 +21,24 @@
         <meta name="description" content="Soda Rebottling Corp" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="main.css" />
-        <script src="main.js"></script>
+        <script src="js/main.js"></script>
     </head>
     <body>
         <header>
             <div id="title">
-                <h1>The Soda Rebottling Corp</h1>
+                <h1><a href="index.html">The Soda Rebottling Corp</a></h1>
             </div>
+            <nav role="main">
+                <ul id="menu">
+                    <a href="index.html"><li>Home</li></a>
+                    <a href="faq.html"><li>FAQ</li></a>
+                    <a href="contact.html"><li>Contact</li></a>
+                </ul>
+            </nav>
         </header>
         <main>
             <h2>We rebottle your sodas.</h2>
+            <img src="img/soda3.jpg" id="sodaman">
             <p>
                 How many times have you opened a soda, drank part of it, and realized halfway through that you were not going to finish it?
             </p>
@@ -39,14 +51,17 @@
             <p>
                 Please, use our Soda Bottle Calculator to determine what kind of vessel you will be using:
             </p>
+            <div class="clear"></div>
             <div id="calculator">
-                <label><em>Residual Soda Amount (oz):</em> </label>
+                <label><em>Residual Soda Amount (oz):</em>&nbsp;</label>
                 <input id="soda"/>
                 <button onclick="calculate_action()">Submit</button>
                 <br>
                 <span id="calculated"></span>
             </div>
         </main>
-        <footer></footer>
+        <footer>
+
+        </footer>
     </body>
 </html>

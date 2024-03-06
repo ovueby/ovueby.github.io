@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Soda Rebottling Co.</title>
+        <meta name="author" content="Sam Carr" />
+        <meta charset="UTF-8" />
+        <meta name="description" content="Soda Rebottling Corp" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="main.css" />
+        <script src="js/contact.js"></script>
+    </head>
+    <body>
+        <header>
+            <div id="title">
+                <h1><a href="index.html">The Soda Rebottling Corp</a></h1>
+            </div>
+            <nav role="main">
+                <ul id="menu">
+                    <a href="index.html"><li>Home</li></a>
+                    <a href="faq.html"><li>FAQ</li></a>
+                    <a href="contact.html"><li>Contact</li></a>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <form id="contact">
+                <fieldset>
+                    <legend>Contact us:</legend>
+                    <label class="required" for="contact_name"><em>Your name:</em></label><br />
+                    <input class="input" id="contact_name" name="name" type="text" value="" size="30" required/><br />
+                    <label class="required" for="contact_subject"><em>Your subject:</em></label><br />
+                    <input class="input" id="contact_subject" name="subject" size="30" type="text" value="" required/><br />
+                    <label for="message"><em>Please enter your message.</em></label><br/>
+                    <textarea name="message" id="contact_message" size="30"></textarea><br>
+                    <input id="contact_submit" type="submit" value="Send email" />
+                </fieldset>
+            </form>
+
+            <div class="pad"></div>
+
+            <form method="GET" id="newsletter">
+                <fieldset>
+                    <legend>Sign up for our newsletter:</legend>
+                    <label class="required" for="name"><em>Your name:</em></label>
+                    <input id="newsletter_name" class="input" name="name" type="text" size="30" required/><br/>
+                    <label class="required" for="email"><em>Your email:</em></label>
+                    <input id="newsletter_email" class="input" name="email" type="text" size="30" required/><br/>
+                    <input id="newsletter_submit" type="submit" value="Sign up" />
+                </fieldset>
+            </form>
+        </main>
+        <footer></footer>
+    </body>
+</html>

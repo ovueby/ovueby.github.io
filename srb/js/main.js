@@ -20,6 +20,7 @@ const oz_to_container = (oz) => {
 }
 
 const qs = (q) => document.querySelector(q);
+const qsa = (q) => document.querySelectorAll(q);
 
 const calculate_action = () => {
     const input = qs("#soda");
@@ -28,3 +29,4 @@ const calculate_action = () => {
     const output = qs("#calculated");
     output.innerHTML = `You are looking for a: <strong>${cont}</strong>.`
 }
+
