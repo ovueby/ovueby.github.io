@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <!-- *******************************************************************************
+         *  1/31/2024 - Added Javascript Stuff                                         *
+         *  1/29/2024 - Researched CSS background stripes                              *
+                      - Implemented stripes                                            *
+                      - Stripes made it hard to read, removed stripes                  *
+                      - Added CSS media query                                          *
+         *  1/28/2024 - Added real HTML description, implemented CSS                   *
+         *  1/27/2024 - Started project                                                *
+                      - Unsuccessfully attempted to make logo                          *
+         ******************************************************************************* -->
+    <head>
+        <title>The Soda Rebottling Co.</title>
+        <meta name="author" content="Sam Carr" />
+        <meta charset="UTF-8" />
+        <meta name="description" content="Soda Rebottling Corp" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="main.css" />
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <header>
+            <div id="title">
+                <h1>The Soda Rebottling Corp</h1>
+            </div>
+        </header>
+        <main>
+            <h2>We rebottle your sodas.</h2>
+            <p>
+                How many times have you opened a soda, drank part of it, and realized halfway through that you were not going to finish it?
+            </p>
+            <p>
+                The Soda Rebottling company is here for you!
+            </p>
+            <p>
+                Send us your soda in a Ziploc bag along with $10 and we will ship you back a freshly rebottled soda, trimmed especially to the amount of liquid you have sent.
+            </p>
+            <p>
+                Please, use our Soda Bottle Calculator to determine what kind of vessel you will be using:
+            </p>
+            <div id="calculator">
+                <label><em>Residual Soda Amount (oz):</em> </label>
+                <input id="soda"/>
+                <button onclick="calculate_action()">Submit</button>
+                <br>
+                <span id="calculated"></span>
+            </div>
+        </main>
+        <footer></footer>
+    </body>
+</html>
