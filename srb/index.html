@@ -18,6 +18,7 @@
          *  3/8/2024  - Added Slideshow                                                *
          *  3/8/2024  - Replaced vanilla Javascript with jQuery                        *
          *  3/8/2024  - Added Pie Chart jQuery Plugin                                  *
+         *  3/8/2024  - Added Date functionality                                       *
          ******************************************************************************* -->
     <head>
         <title>The Soda Rebottling Co.</title>
@@ -65,7 +66,7 @@
                 Send us your soda in a Ziploc bag along with $10 and we will ship you back a freshly rebottled soda, trimmed especially to the amount of liquid you have sent.
             </p>
             <p>
-                <a href="#" id="test" data-toggle="tooltip" data-theme="black" data-size="tiny" data-position="top">Please, use our Soda Bottle Calculator to determine what kind of vessel you will be using:</a>
+                Please, use our Soda Bottle Calculator to determine what kind of vessel you will be using:
             </p>
             <div class="clear"></div>
             <div id="calculator">
@@ -79,7 +80,8 @@
             </div>
         </main>
         <footer>
-
+            <hr>
+            <strong class="disclaimer"><em>ON THIS VERY DATE() OF <span id="date">TODAY</span>, SODA REBOTTLING CORP HENCEFORTH AND THENCEBACK DISCLAIMS ALL WARRANTY FOR MISUSE OF THE SODA BOTTLE CALCULATOR.</em></strong>
         </footer>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"
 			    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="

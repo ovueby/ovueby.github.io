@@ -109,3 +109,7 @@ input, textarea {
     margin: auto;
     width: 70%;
 }
+
+.disclaimer {
+    font-size: 0.8em;
+}

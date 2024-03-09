@@ -22,6 +22,8 @@ const oz_to_container = (oz) => {
     }
 }
 
+const fancify = (n) => ["th", "st", "nd", "rd", "th"][n > 4 ? 4 : n]
+
 $(document).ready(function() {
     const input = $("#soda");
     const output = $("#calculated");
@@ -34,4 +36,9 @@ $(document).ready(function() {
         output.animate({paddingLeft: "20"}, 100)
               .animate({paddingLeft: "0"}, 100);
     });
+
+    const theDate = new Date();
+    const theMonth = theDate.toLocaleString('default', { month: 'long' });
+    const theDay = theDate.getDate();
+    $("#date").text(`${theMonth} the ${theDay}${fancify(theDay)}`.toUpperCase())
 });
