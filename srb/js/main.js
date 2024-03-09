@@ -2,7 +2,10 @@ const oz_to_container = (oz) => {
     if(isNaN(oz) || typeof oz != "number") {
         return "ERROR";
     }
-    if(oz <= 12.0) {
+    if(oz < 0) {
+        return "Dark Matter Storage Unit";
+    }
+    else if(oz <= 12.0) {
         return "Vial";
     }
     else if(oz <= 24.0) {
@@ -19,14 +22,17 @@ const oz_to_container = (oz) => {
     }
 }
 
-const qs = (q) => document.querySelector(q);
-const qsa = (q) => document.querySelectorAll(q);
+$(document).ready(function() {
+    const input = $("#soda");
+    const output = $("#calculated");
+    const submit = $("#soda_submit");
 
-const calculate_action = () => {
-    const input = qs("#soda");
-    const n = parseFloat(input.value);
-    const cont = oz_to_container(n);
-    const output = qs("#calculated");
-    output.innerHTML = `You are looking for a: <strong>${cont}</strong>.`
-}
+    submit.click(function(evt) {
+        evt.preventDefault();
+        const ctr = oz_to_container(parseFloat(input.val()));
+        output.html(`You are looking for a: <strong>${ctr}</strong>.`)
+        output.animate({paddingLeft: "20"}, 100)
+              .animate({paddingLeft: "0"}, 100);
+    });
 
+});

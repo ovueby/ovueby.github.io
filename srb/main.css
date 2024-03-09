@@ -30,6 +30,8 @@ header, main, footer {
     float: left;
     margin: 0 20px 20px 0;
 }
+.cycle-slideshow { width: 50%; background-color: #BBC3A4;  }
+.cycle-slideshow img { width: auto; height: 300px; }
 
 nav {
     /* background-color: #186F65; */
@@ -101,4 +103,9 @@ input, textarea {
     body {
         width: calc(100% - 20px);
     }
+}
+
+/* for JavaScript */
+.hidden {
+    display: none;
 }

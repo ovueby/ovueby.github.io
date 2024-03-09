@@ -1,30 +1,39 @@
-const qs = (q) => document.querySelector(q);
-const qsa = (q) => document.querySelectorAll(q);
+const folded_icon = "▸ ";
+const unfolded_icon = "▾ ";
 
-document.addEventListener("DOMContentLoaded", (event) => {
-    const sections = qsa(".qa");
-    sections.forEach(function(section) {
-        const triangle = document.createElement("span");
-        const q = section.querySelector("h2");
-        const a = section.querySelector("p");
+// use `function()` over `() =>` because it binds `this`
+$(document).ready(function() {
+    $(".qa").each(function () {
+        // Fragile if format for qa is changed, but should be fine
+        const question = $(this).children().first();
+        const answer = $(question).next();
 
-        /* set up the default QA state */
-        triangle.append("▸ ");
-        q.prepend(triangle);
-        q.style.cursor = "pointer";
+        // We don't want to do this in HTML in case the user does not have JavaScript enabled
+        answer.hide(0);
+        question.css("cursor", "pointer");
+        question.prepend(`<span>${folded_icon}</span>`);
 
-        a.style.display = "none";
+        // Use this instead of jQuery's toggle to ensure state is consistent
+        let folded = true;
 
-        /* toggle when clicked */
-        q.addEventListener("click", function(event) {
-            if(a.style.display == "none") {
-                a.style.display = "";
-                triangle.innerHTML = "▾ ";
+        question.click(function(evt) {
+            const icon = $(this).children().first();
+            if(folded) {
+                // `stop()` the animation beforehand because jQuery queues animations
+                answer.stop().slideDown({
+                    duration: 150,
+                    easing: "swing"
+                });
+                icon.text(unfolded_icon);
+                folded = false;
             } else {
-                a.style.display = "none";
-                triangle.innerHTML = "▸ ";
+                answer.stop().slideUp({
+                    duration: 150,
+                    easing: "swing"
+                });
+                icon.text(folded_icon);
+                folded = true;
             }
         });
-
     });
 });

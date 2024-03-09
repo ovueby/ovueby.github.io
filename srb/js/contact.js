@@ -6,7 +6,7 @@ const id_value = (val) => qs("#" + val).value.trim();
 const name_regex = /[A-Za-z]([a-z]| )*/;
 const email_regex = /^[\w-\.]+@([\w-]+\.)+[\w-]/ // Inspired by https://regexr.com/3e48o
 
-document.addEventListener("DOMContentLoaded", (event) => {
+$(document).ready( () => {
     const newsletter_submit = qs("#newsletter_submit");
     const contact_submit = qs("#contact_submit");
 

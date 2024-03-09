@@ -13,15 +13,16 @@
          *  2/20/2024 - Added Contact page                                             *
          *  2/26/2024 - Improved Style                                                 *
          *  3/6/2024  - Added javascript to FAQ and Contact                            *
+         *  3/6/2024  - Began migration to jQuery                                      *
+         *  3/7/2024  - Removed end slashes from all self-closing tags                 *
          ******************************************************************************* -->
     <head>
         <title>The Soda Rebottling Co.</title>
-        <meta name="author" content="Sam Carr" />
-        <meta charset="UTF-8" />
-        <meta name="description" content="Soda Rebottling Corp" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="main.css" />
-        <script src="js/main.js"></script>
+        <meta name="author" content="Sam Carr">
+        <meta charset="UTF-8">
+        <meta name="description" content="Soda Rebottling Corp">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
     </head>
     <body>
         <header>
@@ -38,7 +39,18 @@
         </header>
         <main>
             <h2>We rebottle your sodas.</h2>
-            <img src="img/soda3.jpg" id="sodaman">
+            <div id="sodaman" class="cycle-slideshow"
+                data-cycle-fx="scrollHorz"
+                data-cycle-auto-height="calc"
+                data-cycle-timeout="2000"
+                data-cycle-center-horz=true
+                data-cycle-center-vert=true>
+                <img src="img/soda1.webp">
+                <img src="img/soda2.webp">
+                <img src="img/soda3.jpg">
+                <img src="img/soda4.jpg">
+                <img src="img/soda5.jpg">
+            </div>
             <p>
                 How many times have you opened a soda, drank part of it, and realized halfway through that you were not going to finish it?
             </p>
@@ -54,14 +66,22 @@
             <div class="clear"></div>
             <div id="calculator">
                 <label><em>Residual Soda Amount (oz):</em>&nbsp;</label>
-                <input id="soda"/>
-                <button onclick="calculate_action()">Submit</button>
-                <br>
-                <span id="calculated"></span>
+                <form>
+                    <input id="soda" type="text">
+                    <input type="submit" id="soda_submit" value="Calculate">
+                    <br>
+                    <span id="calculated"></span>
+                </form>
             </div>
         </main>
         <footer>
 
         </footer>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+			    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			    crossorigin="anonymous"></script>
+        <script src="https://malsup.github.io/jquery.cycle2.js"></script>
+        <script src="https://malsup.github.io/jquery.cycle2.center.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>
