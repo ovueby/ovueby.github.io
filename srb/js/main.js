@@ -34,5 +34,4 @@ $(document).ready(function() {
         output.animate({paddingLeft: "20"}, 100)
               .animate({paddingLeft: "0"}, 100);
     });
-
 });

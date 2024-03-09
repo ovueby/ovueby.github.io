@@ -17,7 +17,6 @@
          *  3/7/2024  - Removed end slashes from all self-closing tags                 *
          *  3/8/2024  - Added Slideshow                                                *
          *  3/8/2024  - Replaced vanilla Javascript with jQuery                        *
-         *  3/8/2024  - Added Pie Chart jQuery Plugin                                  *
          ******************************************************************************* -->
     <head>
         <title>The Soda Rebottling Co.</title>
@@ -42,41 +41,9 @@
             </nav>
         </header>
         <main>
-            <h2>We rebottle your sodas.</h2>
-            <div id="sodaman" class="cycle-slideshow"
-                data-cycle-fx="scrollHorz"
-                data-cycle-auto-height="calc"
-                data-cycle-timeout="2000"
-                data-cycle-center-horz=true
-                data-cycle-center-vert=true>
-                <img src="img/soda1.webp">
-                <img src="img/soda2.webp">
-                <img src="img/soda3.jpg">
-                <img src="img/soda4.jpg">
-                <img src="img/soda5.jpg">
-            </div>
-            <p>
-                How many times have you opened a soda, drank part of it, and realized halfway through that you were not going to finish it?
-            </p>
-            <p>
-                The Soda Rebottling company is here for you!
-            </p>
-            <p>
-                Send us your soda in a Ziploc bag along with $10 and we will ship you back a freshly rebottled soda, trimmed especially to the amount of liquid you have sent.
-            </p>
-            <p>
-                <a href="#" id="test" data-toggle="tooltip" data-theme="black" data-size="tiny" data-position="top">Please, use our Soda Bottle Calculator to determine what kind of vessel you will be using:</a>
-            </p>
-            <div class="clear"></div>
-            <div id="calculator">
-                <label><em>Residual Soda Amount (oz):</em>&nbsp;</label>
-                <form>
-                    <input id="soda" type="text">
-                    <input type="submit" id="soda_submit" value="Calculate">
-                    <br>
-                    <span id="calculated"></span>
-                </form>
-            </div>
+            <h2>Pie Chart</h2>
+            <p>Here is a pie chart which shows how popular different soda products are: </p>
+            <canvas id="piechart" width="800" height="800">Your browser is too old!</canvas>
         </main>
         <footer>
 
@@ -84,8 +51,7 @@
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"
 			    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
 			    crossorigin="anonymous"></script>
-        <script src="js/jquery.cycle2.js"></script>
-        <script src="js/jquery.cycle2.center.js"></script>
-        <script src="js/main.js"></script>
+        <script src="js/jquery.draggable-piechart.js"></script>
+        <script src="js/chart.js"></script>
     </body>
 </html>
